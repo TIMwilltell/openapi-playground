@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build Redocly YAML
-        run: npx @redocly/cli bundle external@v1 --output public/swagger.yaml
+        run: npx @redocly/cli bundle sample@v1 --output public/swagger.yaml
 
       - name: Build Public docs
         run: npx @redocly/cli build-docs public/swagger.yaml -o public/index.html
